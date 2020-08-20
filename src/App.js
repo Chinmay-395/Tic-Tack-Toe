@@ -1,26 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
 import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import ClassCounter from './components/ClassCounter';
+import HookCounter from './components/HookCounter'
+import HookCounterTwo from './components/HookCounterTwo'
+class App extends Component {
+  render() {
+    console.log("Inside the render function")
+    return (
+      <div className="App">
+        <h1>Class Counter</h1>
+        <ClassCounter />
+        <br />
+        <h1>HookCounterOne</h1>
+        {/* <ClassCounter /> */}
+        <HookCounter />
+        <br /><br />
+        <h2>HookCounterTwo</h2>
+        {console.log("I ran before HookCounterTwo")}
+        <HookCounterTwo />
+      </div>
+    );
+  }
 }
 
 export default App;
