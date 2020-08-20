@@ -3,6 +3,7 @@ import './App.css';
 import ClassCounter from './components/ClassCounter';
 import HookCounter from './components/HookCounter'
 import HookCounterTwo from './components/HookCounterTwo'
+import HookCounterThree from './components/HookCounterThree'
 class App extends Component {
   render() {
     console.log("Inside the render function")
@@ -18,6 +19,9 @@ class App extends Component {
         <h2>HookCounterTwo</h2>
         {console.log("I ran before HookCounterTwo")}
         <HookCounterTwo />
+        <br />
+        <h3>HookCounterThree</h3>
+        <HookCounterThree />
       </div>
     );
   }
