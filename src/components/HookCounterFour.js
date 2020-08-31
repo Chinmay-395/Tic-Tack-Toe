@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 function HookCounterFour() {
   const [items, setItems] = useState([])
-  /* initializing the useState function with empty array */
+  /* initializing the useState hook with empty array */
   const addItem = () => {
     setItems([...items, {
       id: items.length,
