@@ -21,4 +21,8 @@
 
 
 ### useEffect Hook
-    - 
+    - This hook lets you perform side effects in functional components
+    - It is a close replacement for componentDidMount, ComponentDidUpdate 
+        & ComponentWillMount
+    - useEffect is a method just like the useState Hook; this useEffect 
+        method run everytime the component renders.

@@ -1,25 +1,34 @@
 import React, { Component } from 'react';
 import './App.css';
-import ClassCounter from './components/ClassCounter';
-import HookCounter from './components/HookCounter'
-import HookCounterTwo from './components/HookCounterTwo'
-import HookCounterThree from './components/HookCounterThree'
-import HookCounterFour from './components/HookCounterFour'
-import HookCounterFive from './components/HookCounterFive';
+// useState React-Hooks
+import ClassCounter from './components/useState/ClassCounter'
+import HookCounter from './components/useState/HookCounter'
+import HookCounterTwo from './components/useState/HookCounterTwo'
+import HookCounterThree from './components/useState/HookCounterThree'
+import HookCounterFour from './components/useState/HookCounterFour'
+import HookCounterFive from './components/useState/HookCounterFive'
+// useEffect React-Hooks
+import ClassCounterOne from './components/useEffect/ClassCounterOne'
+import UseEffectHookCounter from './components/useEffect/UseEffectHookCounter'
 class App extends Component {
   render() {
-    console.log("Inside the render function")
     return (
       <div className="App">
-        <h1>Class Counter</h1>
+        <h1>useEffect Hook</h1>
+        <h3>ClassCounterOne</h3>
+        <ClassCounterOne />
+        <br />
+        <h3>UseEffectHookCounter</h3>
+        <UseEffectHookCounter />
+        <hr />
+        <h1>useState Hook</h1>
+        <h3>Class Counter</h3>
         <ClassCounter />
         <br />
-        <h1>HookCounterOne</h1>
-        {/* <ClassCounter /> */}
+        <h3>HookCounterOne</h3>
         <HookCounter />
         <br /><br />
-        <h2>HookCounterTwo</h2>
-        {console.log("I ran before HookCounterTwo")}
+        <h3>HookCounterTwo</h3>
         <HookCounterTwo />
         <br />
         <h3>HookCounterThree</h3>
@@ -29,6 +38,8 @@ class App extends Component {
         <HookCounterFour />
         <h3>HookCounterFive</h3>
         <HookCounterFive />
+        <hr />
+
       </div>
     );
   }
