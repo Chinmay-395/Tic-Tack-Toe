@@ -13,15 +13,21 @@ import ClassMouse from './components/useEffect/ClassMouse'
 import UseEffectHookCounter from './components/useEffect/UseEffectHookCounter'
 import HookMouse from './components/useEffect/UseEffectHookMouse'
 import MouseContainer from './components/useEffect/MouseContainer'
+import IntervalClassCounter from './components/useEffect/IntervalClassCounter'
+import IntervalHookCounter from './components/useEffect/IntervalHookCounter'
+
+
 class App extends Component {
   render() {
     return (
       <div className="App">
         <h1>useEffect Hook</h1>
-        <h3>MouseContainer</h3>
+        <IntervalClassCounter />
+        <IntervalHookCounter />
+        {/* <h3>MouseContainer</h3>
         <MouseContainer />
         <br />
-        {/* <h3>ClassCounterOne</h3>
+        <h3>ClassCounterOne</h3>
         <ClassCounterOne />
         <br />
         <h3>ClassMouse</h3>
