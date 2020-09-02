@@ -6,7 +6,7 @@ import React, { useState } from 'react'
     So, it takes the function as a parameter as well.
 */
 function CountInitial() {
-  console.log("Run")
+  // console.log("Run")
   return 4
 }
 

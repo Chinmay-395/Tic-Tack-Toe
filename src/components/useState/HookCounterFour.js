@@ -24,7 +24,7 @@ function HookCounterFour() {
   */
   return (
     <div>
-      {console.log("The item array", items)}
+      {/* {console.log("The item array", items)} */}
       <button onClick={addItem}>Add a number</button>
       <ul>
         {
