@@ -9,16 +9,23 @@ import HookCounterFour from './components/useState/HookCounterFour'
 import HookCounterFive from './components/useState/HookCounterFive'
 // useEffect React-Hooks
 import ClassCounterOne from './components/useEffect/ClassCounterOne'
+import ClassMouse from './components/useEffect/ClassMouse'
 import UseEffectHookCounter from './components/useEffect/UseEffectHookCounter'
+import HookMouse from './components/useEffect/UseEffectHookMouse'
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>useEffect Hook</h1>
+        {/* <h1>useEffect Hook</h1>
         <h3>ClassCounterOne</h3>
-        <ClassCounterOne />
+        <ClassCounterOne /> */}
         <br />
-        <h3>UseEffectHookCounter</h3>
+        <h3>ClassMouse</h3>
+        {/* <ClassMouse /> */}
+        <hr />
+        <HookMouse />
+        <br />
+        {/* <h3>UseEffectHookCounter</h3>
         <UseEffectHookCounter />
         <hr />
         <h1>useState Hook</h1>
@@ -38,7 +45,7 @@ class App extends Component {
         <HookCounterFour />
         <h3>HookCounterFive</h3>
         <HookCounterFive />
-        <hr />
+        <hr /> */}
 
       </div>
     );
