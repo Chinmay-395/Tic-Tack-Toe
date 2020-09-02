@@ -16,11 +16,14 @@ function HookMouse() {
   useEffect(() => {
     console.log('useFffect called')
     window.addEventListener('mousemove', logMousePosition)
-
-    // return () => {
-    //   console.log('Component unmounting code')
-    //   window.removeEventListener('mousemove', logMousePosition)
-    // }
+    /*  When you want to execute a "Component-Clean-Up" code (ie ComponentWillUnmount)
+        you include it in a function and return it from the function that is passed
+        into useEffect hook as a parameter
+    */
+    return () => {
+      console.log('Component unmounting code')
+      window.removeEventListener('mousemove', logMousePosition)
+    }
   }, [])
   return (
     <div>
