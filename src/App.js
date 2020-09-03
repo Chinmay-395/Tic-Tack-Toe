@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './App.css';
-import DataFetching from './components/useEffect/DataFetching';
 // // useState React-Hooks
 // import ClassCounter from './components/useState/ClassCounter'
 // import HookCounter from './components/useState/HookCounter'
@@ -16,16 +15,28 @@ import DataFetching from './components/useEffect/DataFetching';
 // import MouseContainer from './components/useEffect/MouseContainer'
 // import IntervalClassCounter from './components/useEffect/IntervalClassCounter'
 // import IntervalHookCounter from './components/useEffect/IntervalHookCounter'
+//import DataFetching from './components/useEffect/DataFetching';
+// // useContext React-Hook
+import ComponentC from './components/useContext/ComponentC'
 
-
+export const UserContext = React.createContext()
+export const ChannelContext = React.createContext()
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>useEffect Hook</h1>
+        <h1>useContext Hook</h1>
+        <div className="App">
+          <UserContext.Provider value={'Vishwas'}>
+            <ChannelContext.Provider value={'Codevolution'}>
+              <ComponentC />
+            </ChannelContext.Provider>
+          </UserContext.Provider>
+        </div>
+        {/* <h1>useEffect Hook</h1>
         <DataFetching />
-        {/* <h3>Interval ticks</h3>
+        <h3>Interval ticks</h3>
         <IntervalClassCounter />
         <IntervalHookCounter />
         <br/>

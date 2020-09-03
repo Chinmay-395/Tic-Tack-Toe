@@ -26,3 +26,40 @@
         & ComponentWillMount
     - useEffect is a method just like the useState Hook; this useEffect 
         method run everytime the component renders.
+
+### useContext Hook
+    - This is an extension of react-Context-API.
+        - [ContextAPI briefly explained]
+            - Consider a react application which has many components
+                you want to use the props used at the very root component
+                at subsequent child component; for that you would have
+                push that props in every child component in between the
+                root and the "required child component".
+            - ContextAPI provides a way to pass data thorugh the component
+                tree without having to pass props down manually at every level
+            - [Working of ContextAPI]
+                1) Create the context (in the root component) using 
+                    createConext method [wherein the value of props resides]
+                2) Provide this context with a value and the provider
+                    must wrap the children component for value to be
+                    available
+                3) The "required child component" will use the context value
+                    using context-consumer.
+                4) For multiple values you must nest the requried chilren
+                    component within the context-providers. 
+                    [and consuming the same becomes very difficult]
+
+        - React useContext hook makes the consumption of the context simpler.
+        - [Working]
+            1) Create the context (in the root component) using 
+                createConext method
+            2) Provide the context value at a high-level in the context
+                tree using the "Provider" method inside "CreateContext"
+                method
+            3) import the useContext hook & import the necessary 
+                context-provider from higher-level component in the tree
+            4) pass in the context-provider in the useContext method
+                and set the useContext hook to a variable.
+
+### useReducer Hook
+    - 
