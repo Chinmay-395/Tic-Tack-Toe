@@ -22,13 +22,19 @@ import './App.css';
 // export const ChannelContext = React.createContext()
 // // useReducer React-Hook
 import CounterOne from './components/useReducer/CounterOne'
+import CounterTwo from './components/useReducer/CounterTwo';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
+        <h1>useReducer</h1>
+        <CounterTwo />
+
+        {/* 
         <CounterOne />
-        {/* <h1>useContext Hook</h1>
+        <br/>
+        <h1>useContext Hook</h1>
         <div className="App">
           <UserContext.Provider value={'Vishwas'}>
             <ChannelContext.Provider value={'Codevolution'}>
