@@ -62,4 +62,12 @@
                 and set the useContext hook to a variable.
 
 ### useReducer Hook
-    - 
+    - useReducer is hook that is used for state management in React
+    - useReducer takes in two parameters 
+        1. reducer function
+        2. initialState
+    - it is similar reducer in react-redux; the reducer function in
+        react-redux takes has two parameters 
+        1. currentState
+        2. action
+        depending upon these parameter the reducer who return a new state.

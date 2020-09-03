@@ -17,16 +17,18 @@ import './App.css';
 // import IntervalHookCounter from './components/useEffect/IntervalHookCounter'
 //import DataFetching from './components/useEffect/DataFetching';
 // // useContext React-Hook
-import ComponentC from './components/useContext/ComponentC'
-
-export const UserContext = React.createContext()
-export const ChannelContext = React.createContext()
+// import ComponentC from './components/useContext/ComponentC'
+// export const UserContext = React.createContext()
+// export const ChannelContext = React.createContext()
+// // useReducer React-Hook
+import CounterOne from './components/useReducer/CounterOne'
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>useContext Hook</h1>
+        <CounterOne />
+        {/* <h1>useContext Hook</h1>
         <div className="App">
           <UserContext.Provider value={'Vishwas'}>
             <ChannelContext.Provider value={'Codevolution'}>
@@ -34,7 +36,7 @@ class App extends Component {
             </ChannelContext.Provider>
           </UserContext.Provider>
         </div>
-        {/* <h1>useEffect Hook</h1>
+        <h1>useEffect Hook</h1>
         <DataFetching />
         <h3>Interval ticks</h3>
         <IntervalClassCounter />
