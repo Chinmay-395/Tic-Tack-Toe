@@ -1,5 +1,15 @@
 import React, { useReducer } from 'react'
-
+/* [Note]
+    We can maintain both state and action as an object
+      - by using action as an object we are able to pass additional data to the
+        reducer function
+      - by using state as an object we are able to keep track of 
+        multiple state variables
+    - Now this approach to maintain multiple state variables in a single state
+      object is suited when dealing with global state
+      To deal with local state their is another way
+      
+*/
 const initialState = {
   firstCounter: 0,
   secondCounter: 10
