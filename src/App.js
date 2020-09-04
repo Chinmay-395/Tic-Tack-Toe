@@ -1,90 +1,38 @@
-import React, { Component } from 'react';
+import React, { Component, useReducer, useContext } from 'react';
 import './App.css';
-// // useState React-Hooks
-// import ClassCounter from './components/useState/ClassCounter'
-// import HookCounter from './components/useState/HookCounter'
-// import HookCounterTwo from './components/useState/HookCounterTwo'
-// import HookCounterThree from './components/useState/HookCounterThree'
-// import HookCounterFour from './components/useState/HookCounterFour'
-// import HookCounterFive from './components/useState/HookCounterFive'
-// // useEffect React-Hooks
-// import ClassCounterOne from './components/useEffect/ClassCounterOne'
-// import ClassMouse from './components/useEffect/ClassMouse'
-// import UseEffectHookCounter from './components/useEffect/UseEffectHookCounter'
-// import HookMouse from './components/useEffect/UseEffectHookMouse'
-// import MouseContainer from './components/useEffect/MouseContainer'
-// import IntervalClassCounter from './components/useEffect/IntervalClassCounter'
-// import IntervalHookCounter from './components/useEffect/IntervalHookCounter'
-//import DataFetching from './components/useEffect/DataFetching';
-// // useContext React-Hook
-// import ComponentC from './components/useContext/ComponentC'
-// export const UserContext = React.createContext()
-// export const ChannelContext = React.createContext()
-// // useReducer React-Hook
-// import CounterOne from './components/useReducer/CounterOne'
-// import CounterTwo from './components/useReducer/CounterTwo';
-import CounterThree from './components/useReducer/CounterThree';
+import ComponentA from './components/useReducer/ComponentA'
+import ComponentB from './components/useReducer/ComponentB'
+import ComponentC from './components/useReducer/ComponentC'
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <h1>useReducer</h1>
-        <CounterThree />
+export const CountContext = React.createContext()
 
-        {/* <CounterTwo />
-        <CounterOne />
-        <br/>
-        <h1>useContext Hook</h1>
-        <div className="App">
-          <UserContext.Provider value={'Vishwas'}>
-            <ChannelContext.Provider value={'Codevolution'}>
-              <ComponentC />
-            </ChannelContext.Provider>
-          </UserContext.Provider>
-        </div>
-        <h1>useEffect Hook</h1>
-        <DataFetching />
-        <h3>Interval ticks</h3>
-        <IntervalClassCounter />
-        <IntervalHookCounter />
-        <br/>
-        <h3>MouseContainer</h3>
-        <MouseContainer />
-        <br />
-        <h3>ClassCounterOne</h3>
-        <ClassCounterOne />
-        <br />
-        <h3>ClassMouse</h3>
-        <ClassMouse />
-        <br />
-        <HookMouse />
-        <br />
-        <h3>UseEffectHookCounter</h3>
-        <UseEffectHookCounter />
-        <hr /><hr /><hr />
-        <h1>useState Hook</h1>
-        <h3>Class Counter</h3>
-        <ClassCounter />
-        <br />
-        <h3>HookCounterOne</h3>
-        <HookCounter />
-        <br /><br />
-        <h3>HookCounterTwo</h3>
-        <HookCounterTwo />
-        <br />
-        <h3>HookCounterThree</h3>
-        <HookCounterThree />
-        <br />
-        <h3>HookCounterFour</h3>
-        <HookCounterFour />
-        <h3>HookCounterFive</h3>
-        <HookCounterFive />
-        <hr /> */}
-
-      </div>
-    );
+const initialState = 0
+const reducer = (state, action) => {
+  switch (action) {
+    case 'increment':
+      return state + 1
+    case 'decrement':
+      return state - 1
+    case 'reset':
+      return initialState
+    default:
+      return state
   }
+}
+
+function App() {
+  const [count, dispatch] = useReducer(reducer, initialState)
+  return (
+    <CountContext.Provider value={{ countState: count, countDispatch: dispatch }}>
+      <div className="App">
+        <h1>useReducer with useContext</h1>
+        Count - {count}
+        <ComponentA />
+        <ComponentB />
+        <ComponentC />
+      </div>
+    </CountContext.Provider>
+  );
 }
 
 export default App;
